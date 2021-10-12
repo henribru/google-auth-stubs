@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "google-auth-stubs"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Type stubs for google-auth"
+authors = ["Henrik Bruåsdal <henrik.bruasdal@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/henribru/google-auth-stubs"
+packages = [
+    { include = "google-stubs" },
+]
+classifiers = [
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+google-auth = "^2.3.0"
+types-requests = "^2.25.9"
+grpc-stubs = "^1.24.7"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+black = {version = "^21.9b0", python = "^3.7"}
+isort = {version = "^5.9.3", python = "^3.7"}
+
+[tool.isort]
+profile = "black"
+known_first_party = ["google.auth", "google.oauth2"]
+combine_as_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

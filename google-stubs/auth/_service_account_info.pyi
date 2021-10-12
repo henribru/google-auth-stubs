@@ -1,0 +1,6 @@
+from typing import Any
+
+from google.auth import crypt as crypt
+
+def from_dict(data, require: Any | None = ...): ...
+def from_filename(filename, require: Any | None = ...): ...
