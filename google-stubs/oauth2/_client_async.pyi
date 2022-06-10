@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions, jwt as jwt
 
@@ -10,6 +10,6 @@ async def refresh_grant(
     refresh_token,
     client_id,
     client_secret,
-    scopes: Any | None = ...,
-    rapt_token: Any | None = ...,
+    scopes: Incomplete | None = ...,
+    rapt_token: Incomplete | None = ...,
 ): ...

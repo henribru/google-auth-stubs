@@ -1,5 +1,6 @@
 import abc
-from typing import Any
+
+from _typeshed import Incomplete
 
 from google.auth import (
     credentials as credentials,
@@ -17,13 +18,13 @@ class Credentials(
         subject_token_type,
         token_url,
         credential_source,
-        service_account_impersonation_url: Any | None = ...,
-        client_id: Any | None = ...,
-        client_secret: Any | None = ...,
-        quota_project_id: Any | None = ...,
-        scopes: Any | None = ...,
-        default_scopes: Any | None = ...,
-        workforce_pool_user_project: Any | None = ...,
+        service_account_impersonation_url: Incomplete | None = ...,
+        client_id: Incomplete | None = ...,
+        client_secret: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        workforce_pool_user_project: Incomplete | None = ...,
     ) -> None: ...
     @property
     def info(self): ...
@@ -37,11 +38,17 @@ class Credentials(
     def requires_scopes(self): ...
     @property
     def project_number(self): ...
-    def with_scopes(self, scopes, default_scopes: Any | None = ...): ...
+    def with_scopes(self, scopes, default_scopes: Incomplete | None = ...): ...
     @abc.abstractmethod
     def retrieve_subject_token(self, request): ...
     def get_project_id(self, request): ...
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def refresh(self, request) -> None: ...
     def with_quota_project(self, quota_project_id): ...
+    @staticmethod
+    def validate_token_url(token_url) -> None: ...
+    @staticmethod
+    def validate_service_account_impersonation_url(url) -> None: ...
+    @staticmethod
+    def is_valid_url(patterns, url): ...

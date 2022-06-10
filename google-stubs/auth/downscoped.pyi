@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import credentials as credentials
 from google.oauth2 import sts as sts
@@ -17,7 +17,7 @@ class AccessBoundaryRule:
         self,
         available_resource,
         available_permissions,
-        availability_condition: Any | None = ...,
+        availability_condition: Incomplete | None = ...,
     ) -> None: ...
     @property
     def available_resource(self): ...
@@ -35,7 +35,10 @@ class AccessBoundaryRule:
 
 class AvailabilityCondition:
     def __init__(
-        self, expression, title: Any | None = ..., description: Any | None = ...
+        self,
+        expression,
+        title: Incomplete | None = ...,
+        description: Incomplete | None = ...,
     ) -> None: ...
     @property
     def expression(self): ...
@@ -56,9 +59,9 @@ class Credentials(credentials.CredentialsWithQuotaProject):
         self,
         source_credentials,
         credential_access_boundary,
-        quota_project_id: Any | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def refresh(self, request) -> None: ...
     def with_quota_project(self, quota_project_id): ...

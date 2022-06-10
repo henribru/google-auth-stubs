@@ -1,20 +1,21 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import credentials as credentials, exceptions as exceptions, jwt as jwt
-from google.auth.transport.requests import AuthorizedSession as AuthorizedSession
 
-class Credentials(credentials.CredentialsWithQuotaProject, credentials.Signing):
-    token: Any
-    expiry: Any
+class Credentials(
+    credentials.Scoped, credentials.CredentialsWithQuotaProject, credentials.Signing
+):
+    token: Incomplete
+    expiry: Incomplete
     def __init__(
         self,
         source_credentials,
         target_principal,
         target_scopes,
-        delegates: Any | None = ...,
+        delegates: Incomplete | None = ...,
         lifetime=...,
-        quota_project_id: Any | None = ...,
-        iam_endpoint_override: Any | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        iam_endpoint_override: Incomplete | None = ...,
     ) -> None: ...
     def refresh(self, request) -> None: ...
     def sign_bytes(self, message): ...
@@ -24,22 +25,25 @@ class Credentials(credentials.CredentialsWithQuotaProject, credentials.Signing):
     def service_account_email(self): ...
     @property
     def signer(self): ...
+    @property
+    def requires_scopes(self): ...
     def with_quota_project(self, quota_project_id): ...
+    def with_scopes(self, scopes, default_scopes: Incomplete | None = ...): ...
 
 class IDTokenCredentials(credentials.CredentialsWithQuotaProject):
     def __init__(
         self,
         target_credentials,
-        target_audience: Any | None = ...,
+        target_audience: Incomplete | None = ...,
         include_email: bool = ...,
-        quota_project_id: Any | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     def from_credentials(
-        self, target_credentials, target_audience: Any | None = ...
+        self, target_credentials, target_audience: Incomplete | None = ...
     ): ...
     def with_target_audience(self, target_audience): ...
     def with_include_email(self, include_email): ...
     def with_quota_project(self, quota_project_id): ...
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def refresh(self, request) -> None: ...

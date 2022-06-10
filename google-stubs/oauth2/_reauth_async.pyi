@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions
 from google.oauth2 import challenges as challenges, reauth as reauth
@@ -9,7 +9,7 @@ async def get_rapt_token(
     client_secret,
     refresh_token,
     token_uri,
-    scopes: Any | None = ...,
+    scopes: Incomplete | None = ...,
 ): ...
 async def refresh_grant(
     request,
@@ -17,7 +17,7 @@ async def refresh_grant(
     refresh_token,
     client_id,
     client_secret,
-    scopes: Any | None = ...,
-    rapt_token: Any | None = ...,
+    scopes: Incomplete | None = ...,
+    rapt_token: Incomplete | None = ...,
     enable_reauth_refresh: bool = ...,
 ): ...

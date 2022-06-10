@@ -1,6 +1,5 @@
-from typing import Any
-
 import aiohttp  # type: ignore[import]
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions, transport as transport
 from google.auth.transport import requests as requests
@@ -26,36 +25,36 @@ class _Response(transport.Response):
     def data(self): ...
 
 class Request(transport.Request):
-    session: Any
-    def __init__(self, session: Any | None = ...) -> None: ...
+    session: Incomplete
+    def __init__(self, session: Incomplete | None = ...) -> None: ...
     async def __call__(
         self,
         url,
         method: str = ...,
-        body: Any | None = ...,
-        headers: Any | None = ...,
+        body: Incomplete | None = ...,
+        headers: Incomplete | None = ...,
         timeout=...,
         **kwargs
     ): ...
 
 class AuthorizedSession(aiohttp.ClientSession):
-    credentials: Any
+    credentials: Incomplete
     def __init__(
         self,
         credentials,
         refresh_status_codes=...,
         max_refresh_attempts=...,
-        refresh_timeout: Any | None = ...,
-        auth_request: Any | None = ...,
+        refresh_timeout: Incomplete | None = ...,
+        auth_request: Incomplete | None = ...,
         auto_decompress: bool = ...,
     ) -> None: ...
     async def request(
         self,
         method,
         url,
-        data: Any | None = ...,
-        headers: Any | None = ...,
-        max_allowed_time: Any | None = ...,
+        data: Incomplete | None = ...,
+        headers: Incomplete | None = ...,
+        max_allowed_time: Incomplete | None = ...,
         timeout=...,
         auto_decompress: bool = ...,
         **kwargs

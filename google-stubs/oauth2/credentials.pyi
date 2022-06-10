@@ -1,25 +1,25 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import credentials as credentials, exceptions as exceptions
 from google.oauth2 import reauth as reauth
 
 class Credentials(credentials.ReadOnlyScoped, credentials.CredentialsWithQuotaProject):
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def __init__(
         self,
         token,
-        refresh_token: Any | None = ...,
-        id_token: Any | None = ...,
-        token_uri: Any | None = ...,
-        client_id: Any | None = ...,
-        client_secret: Any | None = ...,
-        scopes: Any | None = ...,
-        default_scopes: Any | None = ...,
-        quota_project_id: Any | None = ...,
-        expiry: Any | None = ...,
-        rapt_token: Any | None = ...,
-        refresh_handler: Any | None = ...,
+        refresh_token: Incomplete | None = ...,
+        id_token: Incomplete | None = ...,
+        token_uri: Incomplete | None = ...,
+        client_id: Incomplete | None = ...,
+        client_secret: Incomplete | None = ...,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        expiry: Incomplete | None = ...,
+        rapt_token: Incomplete | None = ...,
+        refresh_handler: Incomplete | None = ...,
         enable_reauth_refresh: bool = ...,
     ) -> None: ...
     @property
@@ -45,17 +45,19 @@ class Credentials(credentials.ReadOnlyScoped, credentials.CredentialsWithQuotaPr
     def with_quota_project(self, quota_project_id): ...
     def refresh(self, request) -> None: ...
     @classmethod
-    def from_authorized_user_info(cls, info, scopes: Any | None = ...): ...
+    def from_authorized_user_info(cls, info, scopes: Incomplete | None = ...): ...
     @classmethod
-    def from_authorized_user_file(cls, filename, scopes: Any | None = ...): ...
-    def to_json(self, strip: Any | None = ...): ...
+    def from_authorized_user_file(cls, filename, scopes: Incomplete | None = ...): ...
+    def to_json(self, strip: Incomplete | None = ...): ...
 
 class UserAccessTokenCredentials(credentials.CredentialsWithQuotaProject):
     def __init__(
-        self, account: Any | None = ..., quota_project_id: Any | None = ...
+        self,
+        account: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     def with_account(self, account): ...
     def with_quota_project(self, quota_project_id): ...
-    token: Any
+    token: Incomplete
     def refresh(self, request) -> None: ...
     def before_request(self, request, method, url, headers) -> None: ...

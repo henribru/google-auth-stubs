@@ -1,16 +1,18 @@
-from typing import Any
+from _typeshed import Incomplete
 
 import google.auth.credentials
 from google.auth import crypt as crypt, exceptions as exceptions
 from google.auth.crypt import es256 as es256
 
-def encode(signer, payload, header: Any | None = ..., key_id: Any | None = ...): ...
+def encode(
+    signer, payload, header: Incomplete | None = ..., key_id: Incomplete | None = ...
+): ...
 def decode_header(token): ...
 def decode(
     token,
-    certs: Any | None = ...,
+    certs: Incomplete | None = ...,
     verify: bool = ...,
-    audience: Any | None = ...,
+    audience: Incomplete | None = ...,
     clock_skew_in_seconds: int = ...,
 ): ...
 
@@ -23,9 +25,9 @@ class Credentials(
         issuer,
         subject,
         audience,
-        additional_claims: Any | None = ...,
+        additional_claims: Incomplete | None = ...,
         token_lifetime=...,
-        quota_project_id: Any | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     @classmethod
     def from_service_account_info(cls, info, **kwargs): ...
@@ -35,10 +37,10 @@ class Credentials(
     def from_signing_credentials(cls, credentials, audience, **kwargs): ...
     def with_claims(
         self,
-        issuer: Any | None = ...,
-        subject: Any | None = ...,
-        audience: Any | None = ...,
-        additional_claims: Any | None = ...,
+        issuer: Incomplete | None = ...,
+        subject: Incomplete | None = ...,
+        audience: Incomplete | None = ...,
+        additional_claims: Incomplete | None = ...,
     ): ...
     def with_quota_project(self, quota_project_id): ...
     def refresh(self, request) -> None: ...
@@ -56,10 +58,10 @@ class OnDemandCredentials(
         signer,
         issuer,
         subject,
-        additional_claims: Any | None = ...,
+        additional_claims: Incomplete | None = ...,
         token_lifetime=...,
         max_cache_size=...,
-        quota_project_id: Any | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     @classmethod
     def from_service_account_info(cls, info, **kwargs): ...
@@ -69,9 +71,9 @@ class OnDemandCredentials(
     def from_signing_credentials(cls, credentials, **kwargs): ...
     def with_claims(
         self,
-        issuer: Any | None = ...,
-        subject: Any | None = ...,
-        additional_claims: Any | None = ...,
+        issuer: Incomplete | None = ...,
+        subject: Incomplete | None = ...,
+        additional_claims: Incomplete | None = ...,
     ): ...
     def with_quota_project(self, quota_project_id): ...
     @property

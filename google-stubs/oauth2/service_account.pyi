@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import credentials as credentials, jwt as jwt
 
@@ -10,12 +10,12 @@ class Credentials(
         signer,
         service_account_email,
         token_uri,
-        scopes: Any | None = ...,
-        default_scopes: Any | None = ...,
-        subject: Any | None = ...,
-        project_id: Any | None = ...,
-        quota_project_id: Any | None = ...,
-        additional_claims: Any | None = ...,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        subject: Incomplete | None = ...,
+        project_id: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        additional_claims: Incomplete | None = ...,
         always_use_jwt_access: bool = ...,
     ) -> None: ...
     @classmethod
@@ -28,13 +28,13 @@ class Credentials(
     def project_id(self): ...
     @property
     def requires_scopes(self): ...
-    def with_scopes(self, scopes, default_scopes: Any | None = ...): ...
+    def with_scopes(self, scopes, default_scopes: Incomplete | None = ...): ...
     def with_always_use_jwt_access(self, always_use_jwt_access): ...
     def with_subject(self, subject): ...
     def with_claims(self, additional_claims): ...
     def with_quota_project(self, quota_project_id): ...
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def refresh(self, request) -> None: ...
     def sign_bytes(self, message): ...
     @property
@@ -49,8 +49,8 @@ class IDTokenCredentials(credentials.Signing, credentials.CredentialsWithQuotaPr
         service_account_email,
         token_uri,
         target_audience,
-        additional_claims: Any | None = ...,
-        quota_project_id: Any | None = ...,
+        additional_claims: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     @classmethod
     def from_service_account_info(cls, info, **kwargs): ...
@@ -58,8 +58,8 @@ class IDTokenCredentials(credentials.Signing, credentials.CredentialsWithQuotaPr
     def from_service_account_file(cls, filename, **kwargs): ...
     def with_target_audience(self, target_audience): ...
     def with_quota_project(self, quota_project_id): ...
-    token: Any
-    expiry: Any
+    token: Incomplete
+    expiry: Incomplete
     def refresh(self, request) -> None: ...
     @property
     def service_account_email(self): ...

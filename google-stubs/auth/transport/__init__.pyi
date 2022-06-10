@@ -1,7 +1,8 @@
 import abc
-from typing import Any
 
-DEFAULT_REFRESH_STATUS_CODES: Any
+from _typeshed import Incomplete
+
+DEFAULT_REFRESH_STATUS_CODES: Incomplete
 DEFAULT_MAX_REFRESH_ATTEMPTS: int
 
 class Response(metaclass=abc.ABCMeta):
@@ -21,8 +22,8 @@ class Request(metaclass=abc.ABCMeta):
         self,
         url,
         method: str = ...,
-        body: Any | None = ...,
-        headers: Any | None = ...,
-        timeout: Any | None = ...,
+        body: Incomplete | None = ...,
+        headers: Incomplete | None = ...,
+        timeout: Incomplete | None = ...,
         **kwargs
     ): ...

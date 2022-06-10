@@ -1,6 +1,5 @@
-from typing import Any
-
-from google.appengine.api import app_identity as app_identity  # type: ignore[import]
+from _typeshed import Incomplete
+from google.appengine.api import app_identity as app_identity  # type: ignore
 
 from google.auth import credentials as credentials, crypt as crypt
 
@@ -16,17 +15,17 @@ class Credentials(
 ):
     def __init__(
         self,
-        scopes: Any | None = ...,
-        default_scopes: Any | None = ...,
-        service_account_id: Any | None = ...,
-        quota_project_id: Any | None = ...,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        service_account_id: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     def refresh(self, request) -> None: ...
     @property
     def service_account_email(self): ...
     @property
     def requires_scopes(self): ...
-    def with_scopes(self, scopes, default_scopes: Any | None = ...): ...
+    def with_scopes(self, scopes, default_scopes: Incomplete | None = ...): ...
     def with_quota_project(self, quota_project_id): ...
     def sign_bytes(self, message): ...
     @property

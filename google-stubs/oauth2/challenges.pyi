@@ -1,5 +1,6 @@
 import abc
-from typing import Any
+
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions
 
@@ -39,4 +40,4 @@ class SamlChallenge(ReauthChallenge):
     def is_locally_eligible(self): ...
     def obtain_challenge_input(self, metadata) -> None: ...
 
-AVAILABLE_CHALLENGES: Any
+AVAILABLE_CHALLENGES: Incomplete

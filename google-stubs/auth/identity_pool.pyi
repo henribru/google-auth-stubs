@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions, external_account as external_account
 
@@ -9,13 +9,13 @@ class Credentials(external_account.Credentials):
         subject_token_type,
         token_url,
         credential_source,
-        service_account_impersonation_url: Any | None = ...,
-        client_id: Any | None = ...,
-        client_secret: Any | None = ...,
-        quota_project_id: Any | None = ...,
-        scopes: Any | None = ...,
-        default_scopes: Any | None = ...,
-        workforce_pool_user_project: Any | None = ...,
+        service_account_impersonation_url: Incomplete | None = ...,
+        client_id: Incomplete | None = ...,
+        client_secret: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        workforce_pool_user_project: Incomplete | None = ...,
     ) -> None: ...
     def retrieve_subject_token(self, request): ...
     @classmethod

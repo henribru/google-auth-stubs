@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
 from google.auth import exceptions as exceptions, transport as transport
 
@@ -16,8 +16,8 @@ class Request(transport.Request):
         self,
         url,
         method: str = ...,
-        body: Any | None = ...,
-        headers: Any | None = ...,
-        timeout: Any | None = ...,
+        body: Incomplete | None = ...,
+        headers: Incomplete | None = ...,
+        timeout: Incomplete | None = ...,
         **kwargs
     ): ...
