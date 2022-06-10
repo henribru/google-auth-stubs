@@ -15,7 +15,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.6.2"
-google-auth = "^2.3.0"
+google-auth = "^2.7.0"
 types-requests = "^2.25.9"
 grpc-stubs = "^1.24.7"
 
