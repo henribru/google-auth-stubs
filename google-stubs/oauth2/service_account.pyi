@@ -19,9 +19,29 @@ class Credentials(
         always_use_jwt_access: bool = ...,
     ) -> None: ...
     @classmethod
-    def from_service_account_info(cls, info: dict[str, str], **kwargs) -> Credentials: ...
+    def from_service_account_info(
+        cls,
+        info: dict[str, str],
+        *,
+        scopes: Any | None = ...,
+        default_scopes: Any | None = ...,
+        subject: Any | None = ...,
+        quota_project_id: Any | None = ...,
+        additional_claims: Any | None = ...,
+        always_use_jwt_access: bool = ...,
+    ) -> Credentials: ...
     @classmethod
-    def from_service_account_file(cls, filename: str, **kwargs) -> Credentials: ...
+    def from_service_account_file(
+        cls,
+        filename: str,
+        *,
+        scopes: Any | None = ...,
+        default_scopes: Any | None = ...,
+        subject: Any | None = ...,
+        quota_project_id: Any | None = ...,
+        additional_claims: Any | None = ...,
+        always_use_jwt_access: bool = ...,
+    ) -> Credentials: ...
     @property
     def service_account_email(self): ...
     @property
@@ -53,9 +73,27 @@ class IDTokenCredentials(credentials.Signing, credentials.CredentialsWithQuotaPr
         quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     @classmethod
-    def from_service_account_info(cls, info: dict[str, str], **kwargs) -> IDTokenCredentials: ...
+    def from_service_account_info(
+        cls,
+        info: dict[str, str],
+        *,
+        service_account_email=...,
+        token_uri=...,
+        target_audience,
+        additional_claims: Any | None = ...,
+        quota_project_id: Any | None = ...,
+    ) -> IDTokenCredentials: ...
     @classmethod
-    def from_service_account_file(cls, filename: str, **kwargs) -> IDTokenCredentials: ...
+    def from_service_account_file(
+        cls,
+        filename: str,
+        *,
+        service_account_email=...,
+        token_uri=...,
+        target_audience,
+        additional_claims: Any | None = ...,
+        quota_project_id: Any | None = ...,
+    ) -> IDTokenCredentials: ...
     def with_target_audience(self, target_audience): ...
     def with_quota_project(self, quota_project_id): ...
     token: Incomplete
