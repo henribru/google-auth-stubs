@@ -1,20 +1,20 @@
-from typing import Any
+from _typeshed import Incomplete
 
-import google.auth
-from google.auth import jwt as jwt
+from google.auth import _credentials_async, jwt as jwt
 
-def encode(signer, payload, header: Any | None = ..., key_id: Any | None = ...): ...
+def encode(
+    signer, payload, header: Incomplete | None = ..., key_id: Incomplete | None = ...
+): ...
 def decode(
-    token, certs: Any | None = ..., verify: bool = ..., audience: Any | None = ...
+    token,
+    certs: Incomplete | None = ...,
+    verify: bool = ...,
+    audience: Incomplete | None = ...,
 ): ...
 
 class Credentials(
-    jwt.Credentials,
-    google.auth._credentials_async.Signing,
-    google.auth._credentials_async.Credentials,
+    jwt.Credentials, _credentials_async.Signing, _credentials_async.Credentials
 ): ...
-class OnDemandCredentials(
-    jwt.OnDemandCredentials,
-    google.auth._credentials_async.Signing,
-    google.auth._credentials_async.Credentials,
+class OnDemandCredentials(  # type: ignore
+    jwt.OnDemandCredentials, _credentials_async.Signing, _credentials_async.Credentials
 ): ...

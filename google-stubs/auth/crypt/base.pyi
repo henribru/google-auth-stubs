@@ -1,5 +1,6 @@
 import abc
-from typing import Any
+
+from _typeshed import Incomplete
 
 class Verifier(metaclass=abc.ABCMeta):
     @abc.abstractmethod
@@ -14,7 +15,7 @@ class Signer(metaclass=abc.ABCMeta):
 
 class FromServiceAccountMixin(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def from_string(cls, key, key_id: Any | None = ...): ...
+    def from_string(cls, key, key_id: Incomplete | None = ...): ...
     @classmethod
     def from_service_account_info(cls, info): ...
     @classmethod

@@ -1,10 +1,8 @@
-from typing import Any
+from _typeshed import Incomplete
 
-from google.auth.crypt import base, es256
-
-Signer = base.Signer
-Verifier = base.Verifier
-RSASigner: Any
-RSAVerifier: Any
-ES256Signer = es256.ES256Signer
-ES256Verifier = es256.ES256Verifier
+Signer: Incomplete
+Verifier: Incomplete
+RSASigner: Incomplete
+RSAVerifier: Incomplete
+ES256Signer: Incomplete
+ES256Verifier: Incomplete

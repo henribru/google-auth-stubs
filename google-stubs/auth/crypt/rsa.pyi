@@ -1,4 +1,4 @@
-from typing import Any
+from _typeshed import Incomplete
 
-RSASigner: Any
-RSAVerifier: Any
+RSASigner: Incomplete
+RSAVerifier: Incomplete
