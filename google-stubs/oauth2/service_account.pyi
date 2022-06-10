@@ -1,3 +1,5 @@
+from typing import Mapping
+
 from _typeshed import Incomplete
 
 from google.auth import credentials as credentials, jwt as jwt
@@ -19,9 +21,29 @@ class Credentials(
         always_use_jwt_access: bool = ...,
     ) -> None: ...
     @classmethod
-    def from_service_account_info(cls, info, **kwargs): ...
+    def from_service_account_info(
+        cls,
+        info: Mapping[str, str],
+        *,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        subject: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        additional_claims: Incomplete | None = ...,
+        always_use_jwt_access: bool = ...,
+    ) -> Credentials: ...
     @classmethod
-    def from_service_account_file(cls, filename, **kwargs): ...
+    def from_service_account_file(
+        cls,
+        filename: str,
+        *,
+        scopes: Incomplete | None = ...,
+        default_scopes: Incomplete | None = ...,
+        subject: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+        additional_claims: Incomplete | None = ...,
+        always_use_jwt_access: bool = ...,
+    ) -> Credentials: ...
     @property
     def service_account_email(self): ...
     @property
@@ -53,9 +75,27 @@ class IDTokenCredentials(credentials.Signing, credentials.CredentialsWithQuotaPr
         quota_project_id: Incomplete | None = ...,
     ) -> None: ...
     @classmethod
-    def from_service_account_info(cls, info, **kwargs): ...
+    def from_service_account_info(
+        cls,
+        info: Mapping[str, str],
+        *,
+        service_account_email=...,
+        token_uri=...,
+        target_audience,
+        additional_claims: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+    ) -> IDTokenCredentials: ...
     @classmethod
-    def from_service_account_file(cls, filename, **kwargs): ...
+    def from_service_account_file(
+        cls,
+        filename: str,
+        *,
+        service_account_email=...,
+        token_uri=...,
+        target_audience,
+        additional_claims: Incomplete | None = ...,
+        quota_project_id: Incomplete | None = ...,
+    ) -> IDTokenCredentials: ...
     def with_target_audience(self, target_audience): ...
     def with_quota_project(self, quota_project_id): ...
     token: Incomplete
