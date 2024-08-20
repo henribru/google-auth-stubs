@@ -7,7 +7,7 @@ from google.auth import (
     transport
 )
 
-from typing import Union, Mapping
+from typing import Any, Mapping, Union
 
 def verify_token(
     id_token: Union[str, bytes],
