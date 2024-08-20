@@ -15,7 +15,7 @@ def verify_token(
     audience: str | list[str] | None = ...,
     certs_url: str = ...,
     clock_skew_in_seconds: int = ...,
-): ...
+) -> Mapping[str, Any]: ...
 def verify_oauth2_token(
     id_token,
     request,
