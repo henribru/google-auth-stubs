@@ -6,12 +6,14 @@ from google.auth import (
     jwt as jwt,
 )
 
+from typing import Union
+
 def verify_token(
-    id_token,
-    request,
-    audience: Incomplete | None = ...,
-    certs_url=...,
-    clock_skew_in_seconds: int = ...,
+    id_token: Union[str, bytes],
+    request: transport.Request,
+    audience: str | list[str] | None = None,
+    certs_url: str = _GOOGLE_OAUTH2_CERTS_URL,
+    clock_skew_in_seconds: int = 0,
 ): ...
 def verify_oauth2_token(
     id_token,
