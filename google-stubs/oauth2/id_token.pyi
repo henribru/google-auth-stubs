@@ -4,6 +4,7 @@ from google.auth import (
     environment_vars as environment_vars,
     exceptions as exceptions,
     jwt as jwt,
+    transport
 )
 
 from typing import Union
@@ -11,9 +12,9 @@ from typing import Union
 def verify_token(
     id_token: Union[str, bytes],
     request: transport.Request,
-    audience: str | list[str] | None = None,
-    certs_url: str = _GOOGLE_OAUTH2_CERTS_URL,
-    clock_skew_in_seconds: int = 0,
+    audience: str | list[str] | None = ...,
+    certs_url: str = ...,
+    clock_skew_in_seconds: int = ...,
 ): ...
 def verify_oauth2_token(
     id_token,
