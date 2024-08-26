@@ -10,7 +10,7 @@ from google.auth import (
 from typing import Any, Mapping, Union
 
 def verify_token(
-    id_token: Union[str, bytes],
+    id_token: str | bytes,
     request: transport.Request,
     audience: str | list[str] | None = ...,
     certs_url: str = ...,
