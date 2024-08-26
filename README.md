@@ -5,7 +5,7 @@ This package provides type stubs for the [google-auth](https://pypi.org/project/
 
 **This is in no way affiliated with Google.**
 
-The stubs were created automatically by [stubgen](https://mypy.readthedocs.io/en/stable/stubgen.html).
+The stubs were largely created automatically by [stubgen](https://mypy.readthedocs.io/en/stable/stubgen.html).
 
 ## Installation
 ```shell script
