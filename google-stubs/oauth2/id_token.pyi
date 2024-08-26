@@ -1,13 +1,13 @@
+from typing import Any, Mapping, Union
+
 from _typeshed import Incomplete
 
 from google.auth import (
     environment_vars as environment_vars,
     exceptions as exceptions,
     jwt as jwt,
-    transport
+    transport,
 )
-
-from typing import Any, Mapping, Union
 
 def verify_token(
     id_token: str | bytes,
